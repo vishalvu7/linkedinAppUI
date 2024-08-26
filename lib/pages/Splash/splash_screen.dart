@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:linkedinapp/onboarding/on_boarding_screen.dart';
+import 'package:linkedinapp/pages/onboarding/on_boarding_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -12,10 +12,10 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
-    Future.delayed(Duration(seconds: 3)).then((onValue) {
+    Future.delayed(const Duration(seconds: 3)).then((onValue) {
       Navigator.pushAndRemoveUntil(
           context,
-          MaterialPageRoute(builder: (builder) => OnBoardingScreen()),
+          MaterialPageRoute(builder: (builder) => const OnBoardingScreen()),
           (route) => false);
     });
 
